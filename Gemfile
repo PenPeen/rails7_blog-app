@@ -81,3 +81,7 @@ gem 'pry-rails'
 gem 'faker'
 gem 'gimei'
 gem 'rails-i18n'
+
+# 2022/09/16 kaminari でのページネーションの実装
+gem 'kaminari'
+gem 'bootstrap5-kaminari-views', '~> 0.0.1'
