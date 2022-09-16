@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 
     # 記事の一覧表示
     def index
-        @articles = Article.all
+        @articles = Article.all.page(params[:page])
     end
 
     # 記事の詳細表示

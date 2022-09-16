@@ -77,6 +77,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.5, < 3)
       sassc-rails (>= 2.0.0)
+    bootstrap5-kaminari-views (0.0.1)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     builder (3.2.4)
     capybara (3.37.1)
       addressable
@@ -115,6 +118,18 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -249,12 +264,14 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2.0)
+  bootstrap5-kaminari-views (~> 0.0.1)
   capybara
   debug
   faker
   gimei
   importmap-rails
   jbuilder
+  kaminari
   mysql2 (~> 0.5)
   pry-rails
   puma (~> 5.0)
