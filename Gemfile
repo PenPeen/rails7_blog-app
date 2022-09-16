@@ -76,3 +76,8 @@ gem 'bootstrap', '~>5.2.0'
 
 # 2022/09/16 pry-railsの導入
 gem 'pry-rails'
+
+# 2022/09/16 Faker（＋日本語ツール）の導入
+gem 'faker'
+gem 'gimei'
+gem 'rails-i18n'
