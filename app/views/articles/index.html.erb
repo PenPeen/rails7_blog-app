@@ -5,15 +5,15 @@
   <div class="row">
   <% @articles.each do |article| %>
   <div class="col-4 mb-5">
-    <a href=<%= article_path(article) %>>
       <div class="card" style="width: 18rem;">
+    <a href=<%= article_path(article) %>>
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><%= article.title %>?</h5>
           <p class="card-text"><%= article.body %></p>
         </div>
-      </div>
     </a>
+      </div>
   </div>
   <% end %>
   </div>

@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
 
     # 記事の一覧表示
     def index
+        binding.pry
         @articles = Article.all
     end
 

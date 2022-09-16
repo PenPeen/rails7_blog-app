@@ -71,4 +71,8 @@ group :test do
   gem "webdrivers"
 end
 
+# 2022/09/16 Bootstrapの導入
 gem 'bootstrap', '~>5.2.0'
+
+# 2022/09/16 pry-railsの導入
+gem 'pry-rails'
