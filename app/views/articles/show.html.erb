@@ -1,0 +1,24 @@
+<div class="container">
+    <%= render 'title', title: '記事の詳細' %>
+    <div class="mb-4">
+        <div>
+            <p class="fw-bolder mb-0">タイトル</p>
+            <p class="border"><%= @article.title %></p>
+        </div>
+
+        <div>
+            <p class="fw-bolder mb-0">内容</p>
+            <p class="border" style="white-space: pre-wrap;"><%= @article.body %></p> <!--改行表示-->
+        </div>
+    </div>
+
+    <div>
+        <%= link_to '一覧へ戻る', articles_path %>
+    </div>
+    <div class="mb-5">
+        <%= link_to '編集', edit_article_path %>
+    </div>
+    <div>
+        <%= link_to "削除", article_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+    </div>
+</div>

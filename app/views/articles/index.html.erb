@@ -1,0 +1,20 @@
+<div class="container">
+  <%= render 'title', title: '記事一覧' %>
+  <%= button_to "新規作成", new_article_path, method: :get, class: 'btn btn-primary mb-3' %>
+
+  <div class="row">
+  <% @articles.each do |article| %>
+  <div class="col-4 mb-5">
+    <a href=<%= article_path(article) %>>
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= article.title %>?</h5>
+          <p class="card-text"><%= article.body %></p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <% end %>
+  </div>
+</div>
