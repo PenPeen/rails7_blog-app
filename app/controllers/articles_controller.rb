@@ -17,8 +17,12 @@ class ArticlesController < ApplicationController
 
     #　記事の作成処理
     def create
-        Article.create(article_params)
-        redirect_to articles_path
+        @article = Article.new(article_params)
+        if @article.save
+            redirect_to articles_path
+        else
+            render 'new', status: :unprocessable_entity
+        end
     end
 
     # 記事の編集
@@ -29,9 +33,11 @@ class ArticlesController < ApplicationController
     # 記事の更新
     def update
         @article = Article.find(params[:id])
-        @article.update(article_params);
-
-        redirect_to articles_path
+        if @article.update(article_params)
+            redirect_to articles_path
+        else
+            render 'edit', status: :unprocessable_entity
+        end
     end
 
     # 記事削除
